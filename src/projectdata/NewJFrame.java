@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package projectdata;
-
+import javax.swing.JFrame;
 /**
  *
  * @author kareem
@@ -17,6 +17,7 @@ public class NewJFrame extends javax.swing.JFrame {
     public NewJFrame() {
         initComponents();
     }
+   
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -28,10 +29,12 @@ public class NewJFrame extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
+        jLabel3 = new javax.swing.JLabel();
+        Shop = new javax.swing.JButton();
+        Secrter = new javax.swing.JButton();
+        Doctor = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
+        jPanel2 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("DOCTOR");
@@ -45,45 +48,56 @@ public class NewJFrame extends javax.swing.JFrame {
         jPanel1.setToolTipText("");
         jPanel1.setLayout(null);
 
-        jButton2.setBackground(new java.awt.Color(255, 204, 0));
-        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/projectdata/glassesshop.jpg"))); // NOI18N
-        jButton2.setText("jButton2");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
-            }
-        });
-        jPanel1.add(jButton2);
-        jButton2.setBounds(440, 140, 190, 240);
+        jLabel3.setBackground(new java.awt.Color(255, 102, 0));
+        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 153, 0));
+        jLabel3.setText("WELCOME TO THE PANNEL ");
+        jPanel1.add(jLabel3);
+        jLabel3.setBounds(150, 40, 530, 80);
 
-        jButton3.setBackground(new java.awt.Color(255, 255, 255));
-        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/projectdata/maybe3.jpg"))); // NOI18N
-        jButton3.setText("jButton3");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        Shop.setBackground(new java.awt.Color(255, 204, 0));
+        Shop.setIcon(new javax.swing.ImageIcon(getClass().getResource("/projectdata/glassesshop.jpg"))); // NOI18N
+        Shop.setText("jButton2");
+        Shop.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                ShopActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton3);
-        jButton3.setBounds(250, 140, 160, 240);
+        jPanel1.add(Shop);
+        Shop.setBounds(450, 150, 180, 240);
 
-        jButton4.setBackground(new java.awt.Color(255, 204, 51));
-        jButton4.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/projectdata/download.png"))); // NOI18N
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
+        Secrter.setBackground(new java.awt.Color(255, 255, 255));
+        Secrter.setIcon(new javax.swing.ImageIcon(getClass().getResource("/projectdata/1.jpg"))); // NOI18N
+        Secrter.setText("jButton3");
+        Secrter.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
+                SecrterActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton4);
-        jButton4.setBounds(20, 140, 190, 240);
+        jPanel1.add(Secrter);
+        Secrter.setBounds(220, 150, 190, 240);
+
+        Doctor.setBackground(new java.awt.Color(255, 204, 51));
+        Doctor.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        Doctor.setIcon(new javax.swing.ImageIcon(getClass().getResource("/projectdata/download copy.png"))); // NOI18N
+        Doctor.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                DoctorActionPerformed(evt);
+            }
+        });
+        jPanel1.add(Doctor);
+        Doctor.setBounds(20, 150, 190, 230);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/projectdata/AASSWS.jpg"))); // NOI18N
         jLabel1.setToolTipText("");
         jLabel1.setMinimumSize(new java.awt.Dimension(500, 600));
         jLabel1.setVerifyInputWhenFocusTarget(false);
         jPanel1.add(jLabel1);
-        jLabel1.setBounds(0, -20, 940, 480);
+        jLabel1.setBounds(-10, -30, 940, 480);
+
+        jPanel2.setLayout(null);
+        jPanel1.add(jPanel2);
+        jPanel2.setBounds(50, 30, 530, 100);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -99,17 +113,20 @@ public class NewJFrame extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void ShopActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ShopActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_ShopActionPerformed
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton4ActionPerformed
+    private void DoctorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DoctorActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+       
+        new Login().setVisible(true);
+        
+    }//GEN-LAST:event_DoctorActionPerformed
+
+    private void SecrterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SecrterActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_SecrterActionPerformed
 
     /**
      * @param args the command line arguments
@@ -147,10 +164,12 @@ public class NewJFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
+    private javax.swing.JButton Doctor;
+    private javax.swing.JButton Secrter;
+    private javax.swing.JButton Shop;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
     // End of variables declaration//GEN-END:variables
 }
