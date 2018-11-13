@@ -5,6 +5,8 @@
  */
 package projectdata;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author kareem
@@ -37,14 +39,17 @@ public class Login extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setFocusCycleRoot(false);
-        setPreferredSize(new java.awt.Dimension(370, 280));
         setResizable(false);
 
         jPanel1.setLayout(null);
 
-        jTextField2.setText("jTextField2");
+        jTextField2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField2ActionPerformed(evt);
+            }
+        });
         jPanel1.add(jTextField2);
-        jTextField2.setBounds(100, 100, 170, 20);
+        jTextField2.setBounds(120, 100, 150, 20);
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel1.setText("ID:-");
@@ -55,26 +60,24 @@ public class Login extends javax.swing.JFrame {
         jLabel2.setText("Password:-");
         jPanel1.add(jLabel2);
         jLabel2.setBounds(30, 150, 78, 17);
-
-        jTextField1.setText("jTextField1");
         jPanel1.add(jTextField1);
-        jTextField1.setBounds(120, 150, 146, 20);
+        jTextField1.setBounds(120, 150, 150, 20);
 
         jButton1.setBackground(new java.awt.Color(255, 204, 0));
         jButton1.setFont(new java.awt.Font("Trebuchet MS", 3, 14)); // NOI18N
-        jButton1.setText("jButton1");
+        jButton1.setText("LOGIN");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
         jPanel1.add(jButton1);
-        jButton1.setBounds(20, 190, 310, 40);
+        jButton1.setBounds(0, 230, 370, 60);
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/projectdata/loginbackground.jpg"))); // NOI18N
         jLabel3.setAutoscrolls(true);
         jPanel1.add(jLabel3);
-        jLabel3.setBounds(0, -110, 350, 510);
+        jLabel3.setBounds(0, -110, 380, 520);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -86,17 +89,21 @@ public class Login extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 282, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 117, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 282, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
+            MainFrame here = new MainFrame();
+            JOptionPane.showMessageDialog(null, here.getnewjframe());
+     
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField2ActionPerformed
 
     /**
      * @param args the command line arguments

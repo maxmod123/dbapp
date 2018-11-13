@@ -4,18 +4,26 @@
  * and open the template in the editor.
  */
 package projectdata;
+import java.util.ArrayList;
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 /**
  *
  * @author kareem
  */
-public class NewJFrame extends javax.swing.JFrame {
-
-    /**
-     * Creates new form NewJFrame
-     */
-    public NewJFrame() {
+public class MainFrame extends javax.swing.JFrame {
+    public  static int newjframe;
+    int getnewjframe (){
+        return newjframe;
+    }
+    void setnewjframe(int x){
+        newjframe=x;
+    }
+    public MainFrame() {
+        
         initComponents();
+        
+         
     }
    
 
@@ -64,10 +72,10 @@ public class NewJFrame extends javax.swing.JFrame {
             }
         });
         jPanel1.add(Shop);
-        Shop.setBounds(450, 150, 180, 240);
+        Shop.setBounds(450, 150, 170, 230);
 
         Secrter.setBackground(new java.awt.Color(255, 255, 255));
-        Secrter.setIcon(new javax.swing.ImageIcon(getClass().getResource("/projectdata/1.jpg"))); // NOI18N
+        Secrter.setIcon(new javax.swing.ImageIcon(getClass().getResource("/projectdata/1edit.jpg"))); // NOI18N
         Secrter.setText("jButton3");
         Secrter.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -75,7 +83,7 @@ public class NewJFrame extends javax.swing.JFrame {
             }
         });
         jPanel1.add(Secrter);
-        Secrter.setBounds(220, 150, 190, 240);
+        Secrter.setBounds(230, 150, 190, 230);
 
         Doctor.setBackground(new java.awt.Color(255, 204, 51));
         Doctor.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
@@ -114,18 +122,26 @@ public class NewJFrame extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void ShopActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ShopActionPerformed
-        // TODO add your handling code here:
+
+ this.setnewjframe(1);
+        new Login().setVisible(true);
+        
+        
     }//GEN-LAST:event_ShopActionPerformed
 
     private void DoctorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DoctorActionPerformed
-
-       
+this.setnewjframe(2) ;
+JOptionPane.showMessageDialog(null,newjframe);
         new Login().setVisible(true);
         
     }//GEN-LAST:event_DoctorActionPerformed
 
     private void SecrterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SecrterActionPerformed
-        // TODO add your handling code here:
+         new Login().setVisible(true);
+         this.setnewjframe(3) ;  
+         
+         
+          
     }//GEN-LAST:event_SecrterActionPerformed
 
     /**
@@ -145,20 +161,21 @@ public class NewJFrame extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(NewJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MainFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(NewJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MainFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(NewJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MainFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(NewJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MainFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new NewJFrame().setVisible(true);
+                new MainFrame().setVisible(true);
             }
         });
     }
